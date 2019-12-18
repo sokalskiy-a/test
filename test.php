@@ -1,8 +1,8 @@
 <html>
  <head>
-  <title>Тестируем PHP</title>
+  <title>РўРµСЃС‚ PHP</title>
  </head>
  <body>
- <?php echo '<p>Привет, мир!</p>'; ?>
+ <?php echo '<p>РџСЂРёРІС–С‚!</p>'; ?>
  </body>
 </html>
