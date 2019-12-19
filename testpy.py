@@ -1,12 +1,13 @@
+# import os
+import binascii
+import crcmod.predefined
+# import re
 print('         ©2019 Ski Resort ZaharBerkut ')
 print('############################################')
 print('# The program generates a database')
 print('# of codes for LOT turnstiles')
 print('############################################\n')
-import os
-import binascii
-import crcmod.predefined
-import re
+
 
 class switch(object):
     def __init__(self, value):
@@ -27,6 +28,8 @@ class switch(object):
             return True
         else:
             return False
+
+
 x = int(input('Select positional system(1-DEC 2-HEX) '))
 
 for case in switch(x):
@@ -34,7 +37,7 @@ for case in switch(x):
         vardec = input("DecNumber: ")
         range1 = input("Count: ")
         print()
-        f = open("database.txt","w+")
+        f = open("database.txt", "w+")
         vardec10 = int(vardec)
         for i in range(vardec10, vardec10+int(range1)):
             crc8 = crcmod.predefined.Crc('crc-8-maxim')
@@ -50,8 +53,8 @@ for case in switch(x):
         varhex = input("HexNumber: ")
         range1 = input("Count: ")
         print()
-        f = open("database.txt","w+")
-        varhex16 = int(varhex, 16);
+        f = open("database.txt", "w+")
+        varhex16 = int(varhex, 16)
         for i in range(varhex16, varhex16+int(range1)):
             crc8 = crcmod.predefined.Crc('crc-8-maxim')
             strHexValPart = str(hex(i))[2:12]
